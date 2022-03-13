@@ -1,7 +1,8 @@
 URL of deployed application : https://klong75.github.io/daily-calendar/
 # Daily Calendar Scheduling App - Week 5 Challenge
 ```
-## Very simple daily scheduling app allows users to save events for each hour of the business day. THe app uses HTML, CSS and Javascript. 
+## Very simple daily scheduling app allows users to save events for each hour of the business day. 
+The app uses HTML, CSS and Javascript. 
 ## Moment JS is used to keep the current day and hourly time blocks updated.
 ## Jquery is used to simplify javascript for creating and saving events.
 ```
