@@ -1,18 +1,22 @@
 var currentDate = moment().format("dddd, MMMM Do YYYY");
 document.getElementById("currentDay").append(currentDate);
 
-/*function loadEvents() {
-    eventText7am = localStorage.getItem("#event-Text-7am"); 
+
+function loadEvents() {   
+eventText7am = localStorage.getItem("#event-text-7am"); 
+$("#description").append(eventText7am);
 }
-loadEvents()*/
+
+loadEvents()
 
 $(document).ready(function () {
 
     $("#save-event-7am").click(function() {
         var eventText7am = $("#event-text-7am").val();
         $("#event-text-7am").text(eventText7am);
-        localStorage.setItem("#event-text-7am", eventText7am)
-        console.log(eventText7am);
+        localStorage.setItem("#event-text-7am", eventText7am);
+        localStorage.getItem
+        
     })
 
 
@@ -89,4 +93,31 @@ $(document).ready(function () {
     })
 })
     
+timeCheck = function() {
+    const currentHour = moment().hours()
+    
+    $('.time-block').each(function () {
+        const eventHour = parseInt($(this).attr('id').split('-')[1])
+        console.log(currentHour);
+        console.log(eventHour);
+        if (eventHour < currentHour) {
+            $(this).addClass('past')
+        } else if (eventHour === currentHour) {
+            $(this).addClass('present')
+            $(this).removeClass('past')
+        } else {
+            $(this).removeClass('present')
+            $(this).removeClass('past')
+            $(this).addClass('future')
+        }
+    })   
+}
+timeCheck()
+
+    
+      
+
+
+
+
 
